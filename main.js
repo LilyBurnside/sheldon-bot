@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const client = new Discord.Client()
-const module = require('./communist.js');
-const communistManifesto = module.communistManifesto;
+const communist = require('./communist.js');
+const communistManifesto = communist.communistManifesto;
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`)
