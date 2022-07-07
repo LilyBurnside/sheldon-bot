@@ -5,7 +5,8 @@ const client = new Discord.Client({
     Discord.Intents.FLAGS.GUILD_MESSAGES,
     Discord.Intents.FLAGS.GUILDS,
     Discord.Intents.FLAGS.GUILD_PRESENCES,
-    Discord.Intents.FLAGS.GUILD_MEMBERS
+    Discord.Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_MESSAGE_REACTIONS
   ]
 })
 const communist = require('./communist.js');
@@ -22,6 +23,11 @@ client.on("message", msg => {
 
   if (msg.content.includes('!communist')) {
     msg.reply(communistManifesto[0])
+  }
+
+  if (msg.content.includes('morb')) {
+    msg.react('<:9491455149627433971:982006797718159441>');
+    msg.react('<a:948544621418536961:982006666486755409>');
   }
 })
 
