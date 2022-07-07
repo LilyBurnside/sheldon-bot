@@ -1,5 +1,7 @@
-const Discord = require("discord.js")
-const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
+const Discord = require("discord.js");
+const { Intents } = require("discord.js/src");
+const myIntents = new Intents(380105123904)
+const client = new Discord.Client({ intents: myIntents })
 const communist = require('./communist.js');
 const communistManifesto = communist.communistManifesto;
 
