@@ -17,7 +17,7 @@ client.on("ready", () => {
 })
 
 client.on("message", msg => {
-  if (msg.content.includes('lol') || msg.content.includes('haha')) {
+  if (msg.content.includes('lol') || msg.content.includes('haha') || msg.content.includes('Lol') || msg.content.includes('Haha')) {
     msg.reply("Bazinga!");
   }
 
@@ -26,7 +26,7 @@ client.on("message", msg => {
     msg.reply(communistManifesto[randomNumber])
   }
 
-  if (msg.content.includes('morb')) {
+  if (msg.content.includes('morb') || msg.content.includes('Morb')) {
     msg.react('<:9491455149627433971:982006797718159441>');
     msg.react('<a:948544621418536961:982006666486755409>');
   }
