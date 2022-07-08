@@ -22,7 +22,8 @@ client.on("message", msg => {
   }
 
   if (msg.content.includes('!communist')) {
-    msg.reply(communistManifesto[0])
+    const randomNumber = Math.floor(Math.random() * 10)
+    msg.reply(communistManifesto[randomNumber])
   }
 
   if (msg.content.includes('morb')) {
